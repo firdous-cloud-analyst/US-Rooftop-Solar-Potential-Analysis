@@ -8,6 +8,7 @@ Solar companies and policymakers need to know where to focus investment and outr
 Business question:
 
 As solar potential varies across the US, which states have high sunlight potential but low actual adoption — representing the greatest untapped opportunity for future investment?
+
 🗂️ Dataset
 
 Source: bigquery-public-data.sunroof_solar.solar_potential_by_postal_code (Google Project Sunroof, via BigQuery Public Datasets)
@@ -25,6 +26,7 @@ Built a cleaned BigQuery view (solar_clean) filtering to the valid 50 states + D
 
 
 This is documented because it materially affects any state-level rollup — using the raw table as-is would silently inflate the state count and misattribute records.
+
 🛠️ Methodology (SQL)
 
 All analysis was done in BigQuery SQL before ever touching Power BI — the dashboard visualizes pre-validated results, not raw data.
@@ -39,6 +41,7 @@ opportunity_score = sunlight_rank + adoption_rank
 States are ranked separately on sunlight potential (descending) and adoption rate (ascending — lowest adoption ranked first). Summing the two ranks surfaces states that are simultaneously high potential and low adoption — the actual investment opportunity, rather than just "low adoption" states that also happen to have poor sunlight.
 
 An earlier version of this metric used an absolute (potential − realized) / potential gap percentage, but that metric saturated near 99% for almost every state (adoption is low nationwide), making it useless for ranking. The relative-rank approach above was adopted instead — a data-quality finding worth calling out in its own right
+
 🔑 Key Findings
 
 Wyoming, South Dakota, and Oklahoma show the strongest combination of high sunlight potential and low solar adoption — the top "untapped opportunity" states.
@@ -60,12 +63,16 @@ Built in Power BI, connected live to BigQuery, across 4 pages plus a custom dril
 ![Carbon Impact](screenshots/carbon_impact.png)
 
 PagePurposeOverviewNational snapshot — sunlight potential map, adoption leaders, key KPIsAdoptionAdoption rate landscape — top/bottom 10 states, highest/lowest/medianOpportunityCore insight — sunlight vs. adoption scatter plot, ranked opportunity table, recommendationCarbon Impact
+
 🧰 Tech Stack
 Google BigQuery — data storage, cleaning, and SQL analysis
 SQL — CTEs, window functions, subqueries, view management
 Power BI — dashboard, DAX measures, custom tooltips, navigation
 
+👤 Author
 
+Firdous Abbasi
+Data Analyst | Electrical & Electronics Engineering 
 
 
 
