@@ -47,6 +47,17 @@ Nationally, realized carbon offset is a small fraction of technical potential �
 📊 Dashboard
 
 Built in Power BI, connected live to BigQuery, across 4 pages plus a custom drill-through tooltip:
+### Overview
+![Overview](screenshots/overview.png)
+
+### Adoption
+![Adoption](screenshots/adoption.png)
+
+### Opportunity
+![Opportunity](screenshots/opportunity.png)
+
+### Carbon Impact
+![Carbon Impact](screenshots/carbon_impact.png)
 
 PagePurposeOverviewNational snapshot — sunlight potential map, adoption leaders, key KPIsAdoptionAdoption rate landscape — top/bottom 10 states, highest/lowest/medianOpportunityCore insight — sunlight vs. adoption scatter plot, ranked opportunity table, recommendationCarbon Impact
 🧰 Tech Stack
