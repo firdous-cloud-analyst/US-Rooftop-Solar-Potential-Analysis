@@ -48,7 +48,7 @@ Nationally, realized carbon offset is a small fraction of technical potential â€
 
 Built in Power BI, connected live to BigQuery, across 4 pages plus a custom drill-through tooltip:
 ### Overview
-![overview1](screenshots/overview.png)
+![overview1](screenshots/overview1.png)
 
 ### Adoption
 ![Adoption](screenshots/adoption.png)
